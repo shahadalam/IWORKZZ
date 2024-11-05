@@ -1,0 +1,55 @@
+.knowledge-center {
+    position: relative;
+    padding-top: 20px;
+}
+
+/* Top Left Background Image */
+.top-left-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url('public/images/top-left-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Centered Bottom Line Background Image */
+.bottom-line-bg {
+    position: absolute;
+    top: 50%; /* Centered vertically in the viewport */
+    left: 50%; /* Centered horizontally in the viewport */
+    width: 600px; /* Adjust width to fit design */
+    height: 2px;
+    background-image: url('public/images/bottom-line.png'); /* Add your bottom line image here */
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%); /* Centers the image */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Full Width Bottom Shadow Animation */
+.bottom-shadow-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    height: 700px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0.3));
+    animation: moveFullWidth 5s infinite alternate;
+    z-index: -2;
+    border-radius: 50%; /* To give it a rounded appearance */
+}
+
+/* Keyframes for shadow animation moving across full width */
+@keyframes moveFullWidth {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
